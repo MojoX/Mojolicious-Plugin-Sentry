@@ -13,10 +13,9 @@ plugin 'Sentry' => {dsn=>$ENV{'sentry_dsn'}};
 
 get '/' => sub {
     my $c = shift;
-    die '1';
+    die 'test error';
     return $c->render(text => 'Hello Mojo!');
 };
-
 
 my $t = Test::Mojo->new();
 $t->get_ok('/')->status_is(500);
