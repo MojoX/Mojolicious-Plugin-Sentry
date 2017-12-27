@@ -21,3 +21,4 @@ my $t = Test::Mojo->new();
 $t->get_ok('/')->status_is(500);
 
 done_testing();
+
